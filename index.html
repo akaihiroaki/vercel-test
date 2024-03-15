@@ -41,31 +41,11 @@
 
 
 <script>
-{
-  "contents": [
-      {
-          "id": "69xm_r-33n66",
-          "createdAt": "2024-03-15T03:47:05.730Z",
-          "updatedAt": "2024-03-15T03:47:05.730Z",
-          "publishedAt": "2024-03-15T03:47:05.730Z",
-          "revisedAt": "2024-03-15T03:47:05.730Z",
-          "title": "年末年始休業のお知らせ",
-          "body": "<p>2024年12月28日から2025年1月4日までの期間</p><p>誠に勝手ながら末年始休業とさせていただきます。</p>"
-      },
-      {
-          "id": "799hz15-8c_f",
-          "createdAt": "2024-03-15T01:37:05.521Z",
-          "updatedAt": "2024-03-15T01:37:05.521Z",
-          "publishedAt": "2024-03-15T01:37:05.521Z",
-          "revisedAt": "2024-03-15T01:37:05.521Z",
-          "title": "サイトオープンのお知らせ",
-          "body": "<p>サイトをオープンしました。</p>"
-      }
-  ],
-  "totalCount": 2,
-  "offset": 0,
-  "limit": 10
-}
+client
+      .get({
+        endpoint: 'news',
+      })
+      .then((res) => console.log(res));
 </script>
 
 
