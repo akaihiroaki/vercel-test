@@ -21,19 +21,25 @@
     <section class="section">
       <h1>お知らせ</h1>
       <ul>
-        <li><a href="/news/">サイトオープンのお知らせ</a></li>
+        <a href="/news/"><li id="title"></li></a>
       </ul>
-
     </section>
 
-<script>
-  client
-    .get({
-      endpoint: 'news',
-      contentId: '799hz15-8c_f',
-    })
-    .then((res) => console.log(res));
-</script>
+    <script>
+      fetch("https://test-akai.microcms.io/api/v1/news", {
+        headers: {
+          "X-MICROCMS-API-KEY": "PKnVHECZ4cdLbVPm5BmbMAHDDqcDQNf7Sq4e"
+        }
+      })
+        .then(res => res.json())
+        .then(json => {
+          document.getElementById("title").innerHTML = json.title;
+          document.getElementById("body").innerHTML = json.body;
+        })
+    </script>
+
+
+    
 
   </body>
 </html>
